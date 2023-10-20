@@ -8,17 +8,26 @@
 
 
 
-void 
-setup(int64_t N, uint64_t A[])
+void setup(int64_t N, uint64_t A[])
 {
-   printf(" inside direct_sum problem_setup, N=%lld \n", N);
+	printf(" inside direct_sum problem_setup, N=%lld \n", N);
+
+
+	printf("Done, with setting up.");
 }
 
-int64_t
-sum(int64_t N, uint64_t A[])
+int64_t sum(int64_t N, uint64_t A[])
 {
-   printf(" inside direct_sum perform_sum, N=%lld \n", N);
+	printf(" inside direct_sum perform_sum, N=%lld \n", N);
+	int64_t sum = 0;
 
-   return 0;
+	for (int i = 0; i < N; i++) {
+		sum += i;
+		// std::cout << sum << std::endl;
+	}
+
+	std::cout << " inside direct sum: " << sum << std::endl;
+
+	return sum;
 }
 
