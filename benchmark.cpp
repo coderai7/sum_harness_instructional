@@ -75,7 +75,7 @@ int main(int argc, char** argv)
         }
         else
         {
-            std::cout << "Memory latency is: " << elapsedTime.count() / n  << std::endl;
+            std::cout << "Memory latency is: " << (elapsedTime.count() / n) * 1000000000 << " Nanoseconds"  << std::endl;
         }
 
         // insert your end timer code here, and print out elapsed time for this problem size
