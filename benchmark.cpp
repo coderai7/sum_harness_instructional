@@ -14,7 +14,7 @@
 #include <vector>
 #include <string.h>
 
-#include "sum_direct.cpp"
+//#include "sum_direct.cpp"
 //#include "sum_vector.cpp"
 //#include "sum_indirect.cpp"
 
@@ -53,8 +53,9 @@ int main(int argc, char** argv)
         // invoke method to perform the sum
         std::chrono::time_point<std::chrono::high_resolution_clock> start = std::chrono::high_resolution_clock::now();
         t = sum(n, &A[0]);
+
         std::chrono::time_point<std::chrono::high_resolution_clock> end = std::chrono::high_resolution_clock::now();
-        //  std::cout << "The sum is: " << t << std::endl;
+
         std::chrono::duration<double> elapsedTime = end - start;
 
         std::cout << "Time elapsed: " << elapsedTime.count() << std::endl;
@@ -63,10 +64,12 @@ int main(int argc, char** argv)
         std::cout << "The MFLOP/s is: " << ((n / million) / elapsedTime.count()) << std::endl;
 
 
-      
         std::cout << "% Membory bandwith utilized : " << ((((n * 8) / billion) / elapsedTime.count()) / 204.8) << std::endl;
 
-        if (A[0] == 0)
+       //This if condition is used to see if the the vector has been filled with numbers
+      // IF we are using SUm direct the vector will not be filled witha ny numbers and
+      // will just be filled with zeros. Therefore there was no memory access.
+        if (A[1] == 0 && A[2] == 0 && A[3] == 0 && A[4] == 0)
         {
             std::cout << "no memory had been accessed." << std::endl;
         }
