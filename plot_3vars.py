@@ -22,7 +22,7 @@ import matplotlib.pyplot as plt
 
 plot_fname = "myplot.png"
 
-fname = "sample_data_3vars.csv"
+fname = "data.csv"
 df = pd.read_csv(fname, comment="#")
 print(df)
 
@@ -49,7 +49,7 @@ code9_time = df[var_names[9]].values.tolist()
 #======= First Graph ==============
 
 plt.subplot(2,2,1)
-plt.title("Comparison of 3 Codes for MFLOPs")
+plt.title("Comparison of 3 Codes: MFLOPs")
 
 xlocs = [i for i in range(len(problem_sizes))]
 
@@ -77,7 +77,7 @@ plt.savefig(plot_fname, dpi=300)
 #========== Second Graph ============
 
 plt.subplot(2,2,2)
-plt.title("Comparison of 3 Codes Memory Bandwidth")
+plt.title("Comparison of 3 Codes: Memory Bandwidth")
 
 xlocs = [i for i in range(len(problem_sizes))]
 
@@ -105,7 +105,7 @@ plt.savefig(plot_fname, dpi=300)
 #====== Third Graph =======
 
 plt.subplot(2,2,3)
-plt.title("Comparison of 3 Codes Memory Latency")
+plt.title("Comparison of 3 Codes: Memory Latency")
 
 xlocs = [i for i in range(len(problem_sizes))]
 
