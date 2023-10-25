@@ -64,7 +64,7 @@ int main(int argc, char** argv)
         std::cout << "The MFLOP/s is: " << ((n / million) / elapsedTime.count()) << std::endl;
 
 
-        std::cout << "% Membory bandwith utilized : " << ((((n * 8) / billion) / elapsedTime.count()) / 204.8) << std::endl;
+        std::cout << "% Membory bandwith utilized : " << ((((n * 8) / billion) / elapsedTime.count()) / 204.8) * 100 << " %" << std::endl;
 
        //This if condition is used to see if the the vector has been filled with numbers
       // IF we are using SUm direct the vector will not be filled witha ny numbers and
